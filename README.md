@@ -57,8 +57,6 @@ For a richer preview, use nbviewer:
 [View notebook on nbviewer](https://nbviewer.org/github/<your-username>/<your-repo>/blob/main/notebooks/greek_readme_demo.ipynb)
 ```
 
-Replace `<your-username>` and `<your-repo>` with your GitHub details.
-
 ## Results
 The following image shows sample GBM simulated paths along with the expected exponential drift path:
 
