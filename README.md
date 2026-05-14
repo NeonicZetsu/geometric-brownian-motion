@@ -60,4 +60,6 @@ For a richer preview, use nbviewer:
 Replace `<your-username>` and `<your-repo>` with your GitHub details.
 
 ## Results
-[Include charts of simulated paths and convergence plots]
+The following image shows sample GBM simulated paths along with the expected exponential drift path:
+
+![GBM simulation showing simulated paths and expected drift](images/gbm_plot.png)
