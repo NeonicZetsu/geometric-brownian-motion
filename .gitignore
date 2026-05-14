@@ -18,6 +18,22 @@ lib/
 lib64/
 parts/
 sdist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
 var/
 wheels/
 share/python-wheels/

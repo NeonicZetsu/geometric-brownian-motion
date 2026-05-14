@@ -26,3 +26,32 @@ def monte_carlo_price(S0, K, T, r, sigma, n_paths=100_000, option_type='call', s
     price = np.exp(-r * T) * np.mean(payoffs)
     std_err = np.exp(-r * T) * np.std(payoffs) / np.sqrt(n_paths)
     return price, std_err
+
+def delta(S, K, T, r, sigma, option_type='call'):
+    """Black-Scholes Delta."""
+    d1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
+    if option_type == 'call':
+        return norm.cdf(d1)
+    else:
+        return norm.cdf(d1) - 1
+
+def gamma(S, K, T, r, sigma):
+    """Black-Scholes Gamma (same for call and put)."""
+    d1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
+    return norm.pdf(d1) / (S * sigma * np.sqrt(T))
+
+def vega(S, K, T, r, sigma):
+    """Black-Scholes Vega (same for call and put)."""
+    d1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
+    return S * np.sqrt(T) * norm.pdf(d1)
+
+def theta(S, K, T, r, sigma, option_type='call'):
+    """Black-Scholes Theta."""
+    d1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
+    d2 = d1 - sigma * np.sqrt(T)
+    term1 = - (S * sigma * norm.pdf(d1)) / (2 * np.sqrt(T))
+    term2 = r * K * np.exp(-r * T)
+    if option_type == 'call':
+        return term1 - term2 * norm.cdf(d2)
+    else:
+        return term1 + term2 * norm.cdf(-d2)
