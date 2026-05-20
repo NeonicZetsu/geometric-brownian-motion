@@ -45,18 +45,6 @@ See [notebooks/gbm_demo.ipynb](notebooks/gbm_demo.ipynb) for a complete example 
 - `notebooks/gbm_demo.ipynb` — GBM path simulation, calibration, option pricing, and Greeks.
 - `notebooks/greek_readme_demo.ipynb` — notebook documentation demo showing Greek letters, LaTeX math, and README embedding.
 
-GitHub can render notebooks directly when you browse them, and you can link from `README.md` like this:
-
-```markdown
-[View the notebook](notebooks/greek_readme_demo.ipynb)
-```
-
-For a richer preview, use nbviewer:
-
-```markdown
-[View notebook on nbviewer](https://nbviewer.org/github/<your-username>/<your-repo>/blob/main/notebooks/greek_readme_demo.ipynb)
-```
-
 ## Results
 The following image shows sample GBM simulated paths along with the expected exponential drift path:
 
