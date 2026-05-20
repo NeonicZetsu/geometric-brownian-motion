@@ -43,7 +43,6 @@ See [notebooks/gbm_demo.ipynb](notebooks/gbm_demo.ipynb) for a complete example 
 
 ## Notebooks
 - `notebooks/gbm_demo.ipynb` — GBM path simulation, calibration, option pricing, and Greeks.
-- `notebooks/greek_readme_demo.ipynb` — notebook documentation demo showing Greek letters, LaTeX math, and README embedding.
 
 ## Results
 The following image shows sample GBM simulated paths along with the expected exponential drift path:
